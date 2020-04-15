@@ -1,4 +1,2 @@
-# L03001260-S0
-
-hola
-super importante
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/lchrios/SOPracticas)
+HOluuuuuuuuuuu
