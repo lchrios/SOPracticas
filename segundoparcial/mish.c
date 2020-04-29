@@ -50,15 +50,22 @@ int main(void) {
     X(5) Debe ejecutar comandos como ls -l /etc o ps -fea
     X(6) Cuando se teclee exit deberá terminar
     **/
+
+    //Checa si es exit para salir
     if(strcmp(line, "exit") == 0){
         should_run = 0;
         printf("Hasta luego, camarada.\n");
         continue;
     } else {
+        //Si no es exit crea el hijo
         pid_t pid = fork();
+        //Checa si es padre
         if (pid) {
+            //Si es padre lo pone en espera
             wait(NULL);
         } else {
+            //Si retorna un numero negativo es que hubo problemas de ejecucion, ergo manda el mensaje de eror.
+            //Si existe ejecuta y listos
             if (execvp(args[0], args) < 0) {
                 printf("Programa no encontrado\n");
                 break;
