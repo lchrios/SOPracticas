@@ -52,7 +52,7 @@ int main(void) {
     **/
     if(strcmp(line, "exit") == 0){
         should_run = 0;
-        printf("Hasta luego, camarada.");
+        printf("Hasta luego, camarada.\n");
         continue;
     } else {
         pid_t pid = fork();
